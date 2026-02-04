@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="GameStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <p class="subtitle">Guess the secret number between 1 and 100</p>
+        
+        <div class="game-info">
+            <div class="info-box">
+                <div class="info-title">Attempts</div>
+                <div id="attempts-count" class="info-value">0</div>
+            </div>
+            <div class="info-box">
+                <div class="info-title">Best Score</div>
+                <div id="best-score" class="info-value">--</div>
+            </div>
+            <div class="info-box">
+                <div class="info-title">Remaining</div>
+                <div id="remaining-guesses" class="info-value">10</div>
+            </div>
+        </div>
+        
+        <p class="range">Guess a number between <span>1</span> and <span>100</span></p>
+        
+        <div class="input-section">
+            <input type="number" id="guess-input" min="1" max="100" placeholder="Enter your guess">
+            <button id="guess-btn">Guess</button>
+            <button id="reset-btn">New Game</button>
+        </div>
+        
+        <div id="feedback" class="feedback">
+            Start by entering your first guess!
+        </div>
+        
+        <div class="attempts-list">
+            <div class="attempts-title">Your Guesses</div>
+            <div id="attempts-history"></div>
+        </div>
+        
+        <div class="game-rules">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Guess a number between 1 and 100</li>
+                <li>You have 10 attempts to guess the correct number</li>
+                <li>After each guess, you'll get feedback if your guess is too high or too low</li>
+                <li>Try to guess the number in as few attempts as possible!</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./Game.js"></script>
+</html>
